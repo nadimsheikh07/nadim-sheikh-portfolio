@@ -1,1 +1,46 @@
-<p>footer works!</p>
+<footer class="bg-surface-0 dark:bg-surface-900 border-t border-surface-200 dark:border-surface-700 py-8 px-6 mt-12 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    
+    <!-- Branding -->
+    <div class="flex flex-col items-center md:items-start">
+      <span class="text-2xl font-black tracking-tighter text-surface-900 dark:text-surface-0 mb-2">
+        Nadim<span class="text-primary-500">.</span>Sheikh
+      </span>
+      <p class="text-surface-500 dark:text-surface-400 text-sm max-w-xs text-center md:text-left">
+        Building modern, interactive, and premium web applications with Angular.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div class="flex gap-6 text-sm font-medium text-surface-600 dark:text-surface-300">
+      <a routerLink="/home" class="hover:text-primary-500 transition-colors cursor-pointer">Home</a>
+      <a routerLink="/about" class="hover:text-primary-500 transition-colors cursor-pointer">About</a>
+      <a routerLink="/projects" class="hover:text-primary-500 transition-colors cursor-pointer">Projects</a>
+      <a routerLink="/contact" class="hover:text-primary-500 transition-colors cursor-pointer">Contact</a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="flex items-center gap-3">
+      <a href="https://github.com/nadim-sheikh" target="_blank" rel="noopener noreferrer">
+        <p-button icon="pi pi-github" [rounded]="true" [text]="true" severity="secondary" ariaLabel="GitHub" class="hover:scale-110 transition-transform"></p-button>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <p-button icon="pi pi-linkedin" [rounded]="true" [text]="true" severity="secondary" ariaLabel="LinkedIn" class="hover:scale-110 transition-transform"></p-button>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <p-button icon="pi pi-twitter" [rounded]="true" [text]="true" severity="secondary" ariaLabel="Twitter" class="hover:scale-110 transition-transform"></p-button>
+      </a>
+    </div>
+
+  </div>
+
+  <p-divider styleClass="my-6"></p-divider>
+
+  <!-- Copyright -->
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-surface-400 dark:text-surface-500">
+    <p>&copy; {{ currentYear }} Nadim Sheikh. All rights reserved.</p>
+    <p class="mt-2 md:mt-0 flex items-center gap-1">
+      Made with <i class="pi pi-heart-fill text-red-500 text-xs text-center"></i> using Angular & PrimeNG
+    </p>
+  </div>
+</footer>
