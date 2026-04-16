@@ -1,10 +1,7 @@
-<header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<p-header>
+  <p-menubar [model]="items">
+    <ng-template #start>
+      <span class="text-xl font-bold ml-2 mr-8">Nadim Sheikh</span>
+    </ng-template>
+  </p-menubar>
+</p-header>
