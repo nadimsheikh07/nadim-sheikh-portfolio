@@ -1,7 +1,26 @@
-<p-header>
-  <p-menubar [model]="items">
+  <p-menubar [model]="items" styleClass="site-menubar">
     <ng-template #start>
-      <span class="text-xl font-bold ml-2 mr-8">Nadim Sheikh</span>
+      <div class="brand-block">
+        <div class="brand-copy">
+          <p class="brand-name">{{ profile.fullName }}</p>
+          <p class="brand-role">{{ profile.headline }}</p>
+        </div>
+
+        <div class="brand-meta">
+          <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+          <span>{{ profile.phone }}</span>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #end>
+      <div class="header-links">
+        @for (link of profileLinks; track link.label) {
+          <a [href]="link.url" target="_blank" rel="noreferrer" [attr.aria-label]="link.label">
+            <i [class]="link.icon"></i>
+            <span>{{ link.label }}</span>
+          </a>
+        }
+      </div>
     </ng-template>
   </p-menubar>
-</p-header>
