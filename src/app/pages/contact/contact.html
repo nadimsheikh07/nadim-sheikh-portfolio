@@ -1,1 +1,65 @@
-<p>contact works!</p>
+<section class="contact-shell">
+  <div class="ambient ambient-left"></div>
+  <div class="ambient ambient-right"></div>
+
+  <section class="contact-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Contact</p>
+      <h1>Let's build something reliable, useful, and well engineered.</h1>
+      <p class="lead">
+        I'm open to conversations around full-stack product development, Angular and React applications,
+        backend systems, technical leadership, and long-term engineering work where quality matters.
+      </p>
+
+      <div class="focus-chips">
+        @for (item of collaborationAreas; track item) {
+          <p-chip [label]="item"></p-chip>
+        }
+      </div>
+    </div>
+
+    <p-card styleClass="intro-card">
+      <p class="card-label">Best For</p>
+      <p>
+        Teams looking for a hands-on engineer who can move across frontend, backend, architecture, and
+        delivery without losing sight of product clarity.
+      </p>
+
+      <div class="cta-actions">
+        <a href="mailto:nadim.sheikh.07@gmail.com">
+          <p-button label="Send Email" icon="pi pi-envelope" styleClass="contact-button-primary"></p-button>
+        </a>
+        <a href="https://www.linkedin.com/in/nadimsheikh07/" target="_blank" rel="noreferrer">
+          <p-button
+            label="Open LinkedIn"
+            icon="pi pi-linkedin"
+            [outlined]="true"
+            styleClass="contact-button-secondary"
+          ></p-button>
+        </a>
+      </div>
+    </p-card>
+  </section>
+
+  <section class="contact-grid">
+    @for (item of contactMethods; track item.label) {
+      <article class="contact-card">
+        <div class="contact-topline">
+          <i [class]="item.icon"></i>
+          <span>{{ item.label }}</span>
+        </div>
+        <p>{{ item.value }}</p>
+        <a [href]="item.href" target="_blank" rel="noreferrer">Open</a>
+      </article>
+    }
+  </section>
+
+  <section class="note-panel">
+    <p class="eyebrow">Working Style</p>
+    <h2>I work best with teams that value clarity, ownership, and steady delivery.</h2>
+    <p>
+      If your project needs someone who can contribute to frontend systems, backend services, integration
+      work, and implementation details without losing the bigger picture, I'd be happy to connect.
+    </p>
+  </section>
+</section>

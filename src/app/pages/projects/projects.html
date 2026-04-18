@@ -1,1 +1,78 @@
-<p>projects works!</p>
+<section class="projects-shell">
+  <div class="ambient ambient-left"></div>
+  <div class="ambient ambient-right"></div>
+
+  <section class="projects-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Selected Projects</p>
+      <h1>Product work shaped by real delivery pressure, not just polished mockups.</h1>
+      <p class="lead">
+        These projects come directly from my CV and reflect the kinds of systems I have built across
+        e-commerce, healthcare, operations, and public-facing platforms. The common thread is practical
+        engineering with an emphasis on maintainability, performance, and clear product execution.
+      </p>
+    </div>
+
+    <p-card styleClass="summary-card">
+      <p class="card-label">Project Lens</p>
+      <p>
+        I tend to do my best work on products that need strong backend structure, responsive frontend delivery,
+        and teams that care about quality over short-lived hacks.
+      </p>
+      <div class="hero-chips">
+        <p-chip label="Microservices"></p-chip>
+        <p-chip label="Frontend Systems"></p-chip>
+        <p-chip label="Scalable APIs"></p-chip>
+      </div>
+    </p-card>
+  </section>
+
+  <section class="featured-grid">
+    @for (project of featuredProjects; track project.title) {
+      <p-card styleClass="project-card">
+        <div class="project-meta">
+          <span>{{ project.period }}</span>
+          <span>{{ project.company }}</span>
+        </div>
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.summary }}</p>
+
+        <div class="outcome-list">
+          @for (item of project.outcomes; track item) {
+            <article class="outcome-item">
+              <span class="outcome-dot"></span>
+              <p>{{ item }}</p>
+            </article>
+          }
+        </div>
+
+        <div class="tag-row">
+          @for (tech of project.stack; track tech) {
+            <p-tag [value]="tech" severity="success"></p-tag>
+          }
+        </div>
+      </p-card>
+    }
+  </section>
+
+  <section class="cluster-panel">
+    <div class="panel-heading">
+      <p class="eyebrow">Project Types</p>
+      <h2>The work spans multiple domains, but the delivery mindset stays consistent.</h2>
+    </div>
+
+    <div class="cluster-grid">
+      @for (cluster of clusters; track cluster.title) {
+        <article class="cluster-card">
+          <h3>{{ cluster.title }}</h3>
+          <p>{{ cluster.description }}</p>
+          <div class="cluster-tags">
+            @for (item of cluster.items; track item) {
+              <p-chip [label]="item"></p-chip>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</section>

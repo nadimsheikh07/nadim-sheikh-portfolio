@@ -1,0 +1,275 @@
+:host {
+  display: block;
+}
+
+.contact-shell {
+  --page-bg: #eef9f0;
+  --panel: rgba(255, 255, 255, 0.86);
+  --text-main: #102316;
+  --text-soft: #4c7158;
+  --line: rgba(61, 153, 87, 0.16);
+  --accent: #2fad53;
+  --accent-deep: #1b7b37;
+  position: relative;
+  overflow: clip;
+  min-height: 100vh;
+  padding: clamp(1.25rem, 2vw, 2rem);
+  background:
+    radial-gradient(circle at top left, rgba(53, 199, 89, 0.14), transparent 30%),
+    radial-gradient(circle at 86% 14%, rgba(129, 233, 155, 0.2), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, var(--page-bg) 48%, #e3f3e8 100%);
+  color: var(--text-main);
+}
+
+.ambient {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(14px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.ambient-left {
+  top: 8rem;
+  left: -5rem;
+  width: 15rem;
+  height: 15rem;
+  background: rgba(53, 199, 89, 0.15);
+}
+
+.ambient-right {
+  top: 18rem;
+  right: -6rem;
+  width: 18rem;
+  height: 18rem;
+  background: rgba(143, 242, 170, 0.2);
+}
+
+.contact-hero,
+.contact-grid,
+.note-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(310px, 0.75fr);
+  gap: 1.5rem;
+  max-width: 1180px;
+  margin: 0 auto 1.5rem;
+  padding: clamp(2rem, 4vw, 4rem) 0 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.9rem;
+  color: var(--accent-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1,
+.note-panel h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.hero-copy h1 {
+  max-width: 11ch;
+  font-size: clamp(2.9rem, 6vw, 5.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.lead,
+.note-panel p,
+.intro-card p,
+.contact-card p {
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+.lead {
+  max-width: 44rem;
+  margin: 1.5rem 0 0;
+  font-size: clamp(1rem, 1.55vw, 1.14rem);
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+:host ::ng-deep .focus-chips .p-chip {
+  background: rgba(53, 199, 89, 0.14);
+  color: #1b7b37;
+  border: 1px solid rgba(53, 199, 89, 0.22);
+}
+
+:host ::ng-deep .intro-card.p-card,
+.contact-card,
+.note-panel {
+  backdrop-filter: blur(18px);
+}
+
+:host ::ng-deep .intro-card.p-card {
+  align-self: end;
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(244, 252, 246, 0.97) 100%);
+  color: inherit;
+  box-shadow: none;
+}
+
+:host ::ng-deep .intro-card .p-card-body {
+  padding: 1.5rem;
+}
+
+:host ::ng-deep .intro-card .p-card-content {
+  padding: 0;
+}
+
+.card-label,
+.contact-topline span {
+  color: var(--accent-deep);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.cta-actions a {
+  text-decoration: none;
+}
+
+:host ::ng-deep .contact-button-primary .p-button {
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1f8a3d 0%, #35c759 100%);
+  border-color: #35c759;
+  color: #fff;
+}
+
+:host ::ng-deep .contact-button-secondary .p-button {
+  border-radius: 999px;
+  border-color: rgba(47, 173, 83, 0.28);
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 1180px;
+  margin: 0 auto 1.5rem;
+}
+
+.contact-card {
+  padding: 1.3rem;
+  border: 1px solid var(--line);
+  border-radius: 1.6rem;
+  background: rgba(255, 255, 255, 0.8);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 32px rgba(55, 111, 72, 0.12);
+  border-color: rgba(61, 153, 87, 0.28);
+}
+
+.contact-topline {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.contact-topline i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.9rem;
+  background: rgba(53, 199, 89, 0.12);
+  color: var(--accent-deep);
+}
+
+.contact-card p {
+  margin: 0.9rem 0;
+  font-size: 1.1rem;
+}
+
+.contact-card a {
+  color: var(--accent-deep);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.note-panel {
+  max-width: 1180px;
+  margin: 0 auto 2rem;
+  padding: clamp(1.25rem, 2vw, 1.7rem);
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  background: var(--panel);
+  box-shadow: 0 15px 35px rgba(55, 111, 72, 0.1);
+}
+
+.note-panel h2 {
+  max-width: 14ch;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 1024px) {
+  .contact-hero,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1,
+  .note-panel h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-shell {
+    padding: 1rem;
+  }
+
+  .contact-hero {
+    padding-top: 1.25rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.5rem, 14vw, 4rem);
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  :host ::ng-deep .intro-card.p-card,
+  .contact-card,
+  .note-panel {
+    border-radius: 1.4rem;
+  }
+}
