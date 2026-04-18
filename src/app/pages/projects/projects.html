@@ -64,6 +64,30 @@
             <p-tag [value]="tech" severity="success"></p-tag>
           }
         </div>
+
+        @if (project.projects?.length) {
+          <div class="subprojects">
+            <p class="subprojects-label">Sub Projects</p>
+            <div class="subproject-list">
+              @for (subproject of project.projects; track subproject.title) {
+                <article class="subproject-card">
+                  <div class="subproject-meta">
+                    <h3>{{ subproject.title }}</h3>
+                    <span>{{ subproject.period }}</span>
+                  </div>
+                  <p>{{ subproject.description }}</p>
+
+                  @if (subproject.url) {
+                    <a [href]="subproject.url" target="_blank" rel="noreferrer" class="subproject-link">
+                      Open Link
+                      <i class="pi pi-arrow-up-right"></i>
+                    </a>
+                  }
+                </article>
+              }
+            </div>
+          </div>
+        }
       </p-card>
     }
   </section>

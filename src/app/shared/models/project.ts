@@ -6,4 +6,5 @@ export interface Project {
   company?: string;
   url?: string;
   outcomes?: string[];
+  projects?: Project[];
 }
