@@ -4,5 +4,6 @@ export interface Project {
   description: string;
   tech: string[];
   company?: string;
+  url?: string;
   outcomes?: string[];
 }

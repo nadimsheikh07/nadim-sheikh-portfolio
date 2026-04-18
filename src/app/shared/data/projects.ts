@@ -5,6 +5,7 @@ export const PROJECTS: Project[] = [
     title: 'PincodeKart and PincodeDak',
     period: 'Jan 2026 - Present',
     company: 'PincodeKart',
+    url: 'https://www.pincodekart.com/',
     description:
       'PincodeKart delivers high-performance e-commerce solutions built for scale using modular, resilient, and future-proof microservices and micro-frontend architectures.',
     outcomes: [
@@ -17,6 +18,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Python-based Account and Inventory Management System',
     period: 'Jan 2026 - Mar 2026',
+    url: 'https://github.com/nadimsheikh07/account-manager-python-desktop',
     description:
       'Desktop system for account and inventory management with robust backend logic, responsive GUI workflows, and end-to-end purchase and sales handling.',
     outcomes: [
@@ -29,6 +31,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'ATP Forms',
     period: 'Aug 2024 - Dec 2025',
+    url: 'https://forms.atptour.com/',
     company: 'CIGI Technologies Pvt Ltd',
     description:
       'Tournament management solution designed for real-time updates, seamless data collation, and high availability during major sporting events.',
@@ -42,6 +45,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'ATP RuleBook App',
     period: 'Aug 2024 - Dec 2024',
+    url: 'https://play.google.com/store/apps/details?id=com.atptour.rulebook&hl=en_GB',
     company: 'CIGI Technologies Pvt Ltd',
     description:
       'Mobile experience that gives players, coaches, officials, journalists, and fans quick access to ATP rules and regulations.',
@@ -51,6 +55,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Lea Medicare',
     period: 'Jan 2025 - Dec 2025',
+    url: 'https://www.leamedicare.com/',
     company: 'CIGI Technologies Pvt Ltd',
     description:
       'Smart EMR built for Africa offering appointment booking, doctor consultations, medical records, and reports.',
@@ -64,7 +69,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'PowerFlex',
     period: 'Oct 2024 - Jul 2025',
-    company: 'CIGI Technologies Pvt Ltd',
+    url: 'https://www.powerflex.com/',
     description:
       'Application that recommends optimized solar inverter and battery solutions with accurate product and cost guidance.',
     outcomes: [
@@ -77,6 +82,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Sedar Global',
     period: 'Jan 2024 - Jul 2024',
+    url: 'https://www.sedarglobal.com/',
     company: 'Sedar Global',
     description:
       'Cutting-edge e-commerce delivery covering websites built from scratch and maintained with a strong focus on code quality.',
@@ -86,6 +92,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Amrits Makeover Studio',
     period: 'Jan 2024 - Jul 2024',
+    url: 'https://amritsmakeover.com/',
     description:
       'WordPress website for a makeover studio, strengthened with SEO strategy and digital marketing support to improve reach and presence.',
     outcomes: [
@@ -98,6 +105,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Firstpost',
     period: 'Apr 2023 - Dec 2023',
+    url: 'https://www.firstpost.com/',
     description:
       'News platform development using Node.js and Express.js with emphasis on real-time updates, seamless user experience, and scalability.',
     outcomes: [
@@ -109,6 +117,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Asset Track For Cloud',
     period: 'Feb 2022 - Mar 2023',
+    url: 'https://assettrackforcloud.com/',
     description:
       'Asset tracking application delivered as a full-stack engineer using Laravel and Next.js for enterprise-style workflows.',
     outcomes: [
@@ -120,6 +129,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Doctors Plaza',
     period: 'Jan 2023 - Mar 2023',
+    url: 'https://www.doctorsplaza.in/',
     description:
       'Platform for doctor listings and helping patients find the right doctor through a clear search and discovery experience.',
     outcomes: ['Skills: Next.js, Material UI, and Express.js'],
@@ -128,6 +138,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Mulberri Insurance Application',
     period: 'Jan 2022 - Mar 2023',
+    url:"https://www.mulberri.io/",
     description:
       'Insurance-buying product designed to simplify access for small- to medium-sized businesses.',
     outcomes: ['Skills: Next.js, Material-UI, Git, React.js, and Java'],
@@ -136,6 +147,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'SonoLab',
     period: 'Mar 2023 - Mar 2023',
+    url:"https://sonolab.in/",
     description:
       'Medical test lab website using React/Next.js, Material UI, and Laravel with SSR/SSG and carefully built REST APIs.',
     outcomes: [
@@ -155,6 +167,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'ThurayaRefill',
     period: 'Aug 2020 - Jan 2021',
+    url:"https://thurayarefill.com/",
     description:
       'Satellite phone recharge product built with React/Next.js, Material UI, and Laravel with custom REST API support.',
     outcomes: [
@@ -166,6 +179,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Pattern Bots Website',
     period: 'May 2020 - May 2020',
+    url:"http://patternbots.com/",
     description:
       'Company website for PatternBots delivered as a full-stack developer using WordPress-based technology.',
     outcomes: ['Skills: PHP and Bootstrap'],
@@ -174,9 +188,13 @@ export const PROJECTS: Project[] = [
   {
     title: 'Cuemath',
     period: 'Nov 2019 - Mar 2020',
+    url:"https://www.cuemath.com/",
     description:
       'Education-focused product designed to strengthen mathematical reasoning and conceptual foundations for children.',
-    outcomes: ['Worked as a frontend developer using React.js and Next.js', 'Skills: Git, React.js, and Python'],
+    outcomes: [
+      'Worked as a frontend developer using React.js and Next.js',
+      'Skills: Git, React.js, and Python',
+    ],
     tech: ['React.js', 'Next.js', 'Python', 'Git'],
   },
   {
@@ -198,6 +216,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'First Code Venture',
     period: 'Dec 2018 - Dec 2018',
+    url:"http://www.firstcodeventure.com/",
     description:
       'Main website for First Code Venture LLP built as Sr. Software Developer and Technical Lead using Angular 6 and Bootstrap 4.',
     outcomes: ['Led delivery and implementation as a senior engineer'],
@@ -208,7 +227,9 @@ export const PROJECTS: Project[] = [
     period: 'Jul 2015 - Jun 2017',
     description:
       'Multiple OpenCart-based online stores including Ageraa, Posgulf, Vita Juwel, Pegasus Tech, and Parmar Techno Shop.',
-    outcomes: ['Developed and customized fully functional e-commerce solutions for multiple clients'],
+    outcomes: [
+      'Developed and customized fully functional e-commerce solutions for multiple clients',
+    ],
     tech: ['OpenCart', 'PHP', 'MySQL', 'Bootstrap'],
   },
   {
@@ -232,7 +253,9 @@ export const PROJECTS: Project[] = [
     period: 'Jul 2015 - Jun 2017',
     description:
       'CodeIgniter-based barcode and inventory tracking system supporting IT asset management across mobile and tablet platforms.',
-    outcomes: ['Skills: MySQL, REST APIs, AJAX, PHP, jQuery, CodeIgniter, API Development, and Bootstrap'],
+    outcomes: [
+      'Skills: MySQL, REST APIs, AJAX, PHP, jQuery, CodeIgniter, API Development, and Bootstrap',
+    ],
     tech: ['PHP', 'CodeIgniter', 'MySQL', 'AJAX', 'jQuery', 'REST APIs', 'Bootstrap'],
   },
 ];

@@ -32,10 +32,21 @@
       <p-card styleClass="project-card">
         <div class="project-meta">
           <span>{{ project.period }}</span>
-          <span>{{ project.company }}</span>
+          @if (project.company) {
+            <span>{{ project.company }}</span>
+          }
         </div>
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
+
+        @if (project.url) {
+          <div class="project-link-row">
+            <a [href]="project.url" target="_blank" rel="noreferrer">
+              Visit Project
+              <i class="pi pi-arrow-up-right"></i>
+            </a>
+          </div>
+        }
 
         <div class="outcome-list">
           @if (project.outcomes) {
