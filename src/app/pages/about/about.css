@@ -3,14 +3,14 @@
 }
 
 .about-shell {
-  --page-bg: #eff9f1;
-  --panel: rgba(255, 255, 255, 0.86);
-  --panel-strong: rgba(255, 255, 255, 0.96);
-  --text-main: #112217;
-  --text-soft: #4f735b;
-  --line: rgba(61, 153, 87, 0.16);
-  --accent: #35c759;
-  --accent-soft: #1b7b37;
+  --page-bg: var(--app-page-bg);
+  --panel: var(--app-panel);
+  --panel-strong: var(--app-panel-strong);
+  --text-main: var(--app-text-main);
+  --text-soft: var(--app-text-soft);
+  --line: var(--app-line);
+  --accent: var(--app-accent);
+  --accent-soft: var(--app-accent-strong);
   position: relative;
   overflow: clip;
   min-height: 100vh;
@@ -18,7 +18,7 @@
   background:
     radial-gradient(circle at top left, rgba(53, 199, 89, 0.14), transparent 28%),
     radial-gradient(circle at 88% 12%, rgba(129, 233, 155, 0.18), transparent 20%),
-    linear-gradient(180deg, #ffffff 0%, var(--page-bg) 48%, #e4f5e8 100%);
+    linear-gradient(180deg, #ffffff 0%, var(--page-bg) 48%, var(--app-page-bg-alt) 100%);
   color: var(--text-main);
 }
 
@@ -169,7 +169,7 @@
   border: 1px solid var(--line);
   border-radius: 2rem;
   background: var(--panel);
-  box-shadow: 0 15px 35px rgba(55, 111, 72, 0.1);
+  box-shadow: var(--app-shadow);
 }
 
 .panel-heading {

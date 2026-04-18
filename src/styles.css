@@ -1,3 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+:root {
+  --app-page-bg: #eef9f0;
+  --app-page-bg-alt: #e3f3e8;
+  --app-panel: rgba(255, 255, 255, 0.86);
+  --app-panel-strong: rgba(255, 255, 255, 0.96);
+  --app-text-main: #102316;
+  --app-text-soft: #4c7158;
+  --app-line: rgba(61, 153, 87, 0.16);
+  --app-accent: #2fad53;
+  --app-accent-strong: #1b7b37;
+  --app-accent-soft: rgba(53, 199, 89, 0.16);
+  --app-shadow: 0 15px 35px rgba(55, 111, 72, 0.1);
+  --app-shadow-hover: 0 18px 32px rgba(55, 111, 72, 0.12);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #ffffff 0%, var(--app-page-bg) 48%, var(--app-page-bg-alt) 100%);
+  color: var(--app-text-main);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+}
