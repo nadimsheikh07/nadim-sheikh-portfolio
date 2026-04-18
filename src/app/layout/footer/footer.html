@@ -1,46 +1,68 @@
-<footer class="bg-surface-0 dark:bg-surface-900 border-t border-surface-200 dark:border-surface-700 py-8 px-6 mt-12 transition-colors duration-300">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-    
-    <!-- Branding -->
-    <div class="flex flex-col items-center md:items-start">
-      <span class="text-2xl font-black tracking-tighter text-surface-900 dark:text-surface-0 mb-2">
-        Nadim<span class="text-primary-500">.</span>Sheikh
-      </span>
-      <p class="text-surface-500 dark:text-surface-400 text-sm max-w-xs text-center md:text-left">
-        Building modern, interactive, and premium web applications with Angular.
-      </p>
+<footer class="site-footer">
+  <div class="footer-glow footer-glow-left"></div>
+  <div class="footer-glow footer-glow-right"></div>
+
+  <div class="footer-shell">
+    <section class="footer-hero">
+      <div class="footer-brand">
+        <p class="footer-label">Let's Build Better Products</p>
+        <h2>{{ profile.fullName }}</h2>
+        <p class="footer-headline">{{ profile.headline }}</p>
+        <p class="footer-copy">
+          Full-stack engineering for teams that care about product clarity, resilient architecture, and
+          long-term maintainability.
+        </p>
+      </div>
+
+      <div class="footer-contact-card">
+        <p class="footer-label">Direct Contact</p>
+        <a [href]="'mailto:' + profile.email" class="footer-contact-link">{{ profile.email }}</a>
+        <p class="footer-phone">{{ profile.phone }}</p>
+        <div class="footer-socials">
+          @for (link of profileLinks; track link.label) {
+            <a [href]="link.url" target="_blank" rel="noreferrer" [attr.aria-label]="link.label">
+              <i [class]="link.icon"></i>
+              <span>{{ link.label }}</span>
+            </a>
+          }
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-grid">
+      <section class="footer-panel">
+        <p class="footer-label">Navigation</p>
+        <div class="footer-links">
+          @for (item of quickLinks; track item.label) {
+            <a [routerLink]="item.route">{{ item.label }}</a>
+          }
+        </div>
+      </section>
+
+      <section class="footer-panel">
+        <p class="footer-label">What I Bring</p>
+        <div class="footer-tags">
+          <span>Angular and React UI</span>
+          <span>Node.js and ASP.NET APIs</span>
+          <span>Microservices and architecture</span>
+          <span>Scalable product delivery</span>
+        </div>
+      </section>
+
+      <section class="footer-panel footer-panel-note">
+        <p class="footer-label">Working Style</p>
+        <p>
+          Open to long-term opportunities with strong teams, meaningful products, and room for learning,
+          ownership, and growth.
+        </p>
+      </section>
     </div>
 
-    <!-- Links -->
-    <div class="flex gap-6 text-sm font-medium text-surface-600 dark:text-surface-300">
-      <a routerLink="/home" class="hover:text-primary-500 transition-colors cursor-pointer">Home</a>
-      <a routerLink="/about" class="hover:text-primary-500 transition-colors cursor-pointer">About</a>
-      <a routerLink="/projects" class="hover:text-primary-500 transition-colors cursor-pointer">Projects</a>
-      <a routerLink="/contact" class="hover:text-primary-500 transition-colors cursor-pointer">Contact</a>
+    <p-divider></p-divider>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} {{ profile.fullName }}. All rights reserved.</p>
+      <p>Designed with Angular, PrimeNG, and a centralized design system.</p>
     </div>
-
-    <!-- Social Links -->
-    <div class="flex items-center gap-3">
-      <a href="https://github.com/nadim-sheikh" target="_blank" rel="noopener noreferrer">
-        <p-button icon="pi pi-github" [rounded]="true" [text]="true" severity="secondary" ariaLabel="GitHub" class="hover:scale-110 transition-transform"></p-button>
-      </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
-        <p-button icon="pi pi-linkedin" [rounded]="true" [text]="true" severity="secondary" ariaLabel="LinkedIn" class="hover:scale-110 transition-transform"></p-button>
-      </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
-        <p-button icon="pi pi-twitter" [rounded]="true" [text]="true" severity="secondary" ariaLabel="Twitter" class="hover:scale-110 transition-transform"></p-button>
-      </a>
-    </div>
-
-  </div>
-
-  <p-divider styleClass="my-6"></p-divider>
-
-  <!-- Copyright -->
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-surface-400 dark:text-surface-500">
-    <p>&copy; {{ currentYear }} Nadim Sheikh. All rights reserved.</p>
-    <p class="mt-2 md:mt-0 flex items-center gap-1">
-      Made with <i class="pi pi-heart-fill text-red-500 text-xs text-center"></i> using Angular & PrimeNG
-    </p>
   </div>
 </footer>
