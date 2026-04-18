@@ -76,7 +76,7 @@
 .principle-card h3,
 .career-item h3 {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--app-font-family);
 }
 
 .hero-copy h1 {
