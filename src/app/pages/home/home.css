@@ -3,22 +3,22 @@
 }
 
 .home-shell {
-  --page-bg: #07110b;
-  --panel: rgba(10, 22, 14, 0.78);
-  --panel-strong: rgba(11, 28, 17, 0.96);
-  --text-main: #f5fff7;
-  --text-soft: #9fc4ab;
-  --line: rgba(82, 183, 110, 0.18);
-  --accent: #35c759;
-  --accent-deep: #7effa0;
+  --page-bg: #eef9f0;
+  --panel: rgba(255, 255, 255, 0.84);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --text-main: #102316;
+  --text-soft: #4c7158;
+  --line: rgba(61, 153, 87, 0.16);
+  --accent: #2fad53;
+  --accent-deep: #1b7b37;
   position: relative;
   overflow: clip;
   min-height: 100vh;
   padding: clamp(1.25rem, 2vw, 2rem);
   background:
-    radial-gradient(circle at top left, rgba(53, 199, 89, 0.18), transparent 30%),
-    radial-gradient(circle at 85% 15%, rgba(80, 255, 128, 0.14), transparent 22%),
-    linear-gradient(180deg, #040805 0%, var(--page-bg) 48%, #030504 100%);
+    radial-gradient(circle at top left, rgba(53, 199, 89, 0.16), transparent 30%),
+    radial-gradient(circle at 85% 15%, rgba(129, 233, 155, 0.2), transparent 22%),
+    linear-gradient(180deg, #ffffff 0%, var(--page-bg) 48%, #e3f3e8 100%);
   color: var(--text-main);
 }
 
@@ -43,7 +43,7 @@
   right: -7rem;
   width: 18rem;
   height: 18rem;
-  background: rgba(84, 255, 151, 0.18);
+  background: rgba(122, 234, 155, 0.22);
 }
 
 .hero,
@@ -114,12 +114,13 @@
   background: linear-gradient(135deg, #1f8a3d 0%, #35c759 100%);
   border-color: #35c759;
   box-shadow: 0 18px 35px rgba(53, 199, 89, 0.18);
+  color: #fff;
 }
 
 :host ::ng-deep .hero-button-secondary .p-button {
-  border-color: rgba(113, 219, 143, 0.35);
+  border-color: rgba(47, 173, 83, 0.28);
   color: var(--text-main);
-  background: rgba(8, 19, 12, 0.55);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .stats-grid {
@@ -139,7 +140,7 @@
   padding: 1.15rem 1rem;
   border: 1px solid var(--line);
   border-radius: 1.5rem;
-  background: rgba(10, 22, 14, 0.74);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .stat-value {
@@ -166,10 +167,10 @@
   display: grid;
   gap: 1rem;
   padding: 1.35rem;
-  border: 1px solid rgba(82, 183, 110, 0.18);
+  border: 1px solid rgba(61, 153, 87, 0.16);
   border-radius: 2rem;
-  background: linear-gradient(180deg, rgba(8, 19, 12, 0.86) 0%, rgba(5, 12, 8, 0.95) 100%);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.28);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(244, 252, 246, 0.96) 100%);
+  box-shadow: 0 25px 45px rgba(55, 111, 72, 0.12);
 }
 
 .panel-glow {
@@ -177,7 +178,7 @@
   inset: 1rem 20% auto 1rem;
   height: 7rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(53, 199, 89, 0.22), rgba(83, 255, 151, 0));
+  background: linear-gradient(90deg, rgba(53, 199, 89, 0.18), rgba(83, 255, 151, 0));
   filter: blur(18px);
 }
 
@@ -262,7 +263,7 @@
   padding: 0.55rem 0.8rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(7, 17, 11, 0.7);
+  background: rgba(255, 255, 255, 0.84);
   color: var(--text-main);
   text-decoration: none;
 }
@@ -274,7 +275,7 @@
   border: 1px solid var(--line);
   border-radius: 2rem;
   background: var(--panel);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 15px 35px rgba(55, 111, 72, 0.1);
 }
 
 .section-heading {
@@ -306,7 +307,7 @@
   min-height: 20rem;
   border: 1px solid var(--line);
   border-radius: 1.6rem;
-  background: linear-gradient(180deg, rgba(10, 22, 14, 0.88) 0%, rgba(7, 15, 10, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(244, 252, 246, 0.96) 100%);
   color: inherit;
   box-shadow: none;
   transition:
@@ -330,7 +331,7 @@
 
 :host ::ng-deep .project-card.p-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 18px 32px rgba(55, 111, 72, 0.12);
   border-color: rgba(82, 183, 110, 0.32);
 }
 
@@ -365,7 +366,7 @@
 
 :host ::ng-deep .tag-row .p-tag {
   background: rgba(53, 199, 89, 0.16);
-  color: #9cffb5;
+  color: #1b7b37;
   border: 1px solid rgba(53, 199, 89, 0.28);
 }
 
@@ -391,7 +392,7 @@
   padding: 1.2rem 1.2rem 1.2rem 1.45rem;
   border: 1px solid var(--line);
   border-radius: 1.4rem;
-  background: rgba(9, 19, 12, 0.82);
+  background: rgba(255, 255, 255, 0.78);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -401,7 +402,7 @@
 .timeline-item:hover,
 .skill-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 18px 32px rgba(55, 111, 72, 0.12);
   border-color: rgba(82, 183, 110, 0.32);
 }
 
@@ -430,7 +431,7 @@
 
 :host ::ng-deep .skill-card .p-chip {
   background: rgba(53, 199, 89, 0.14);
-  color: #b8ffca;
+  color: #1b7b37;
   border: 1px solid rgba(53, 199, 89, 0.22);
 }
 

@@ -3,22 +3,22 @@
 }
 
 .about-shell {
-  --page-bg: #061009;
-  --panel: rgba(10, 22, 14, 0.8);
-  --panel-strong: rgba(11, 28, 17, 0.95);
-  --text-main: #f3fff5;
-  --text-soft: #a3c7ad;
-  --line: rgba(82, 183, 110, 0.18);
+  --page-bg: #eff9f1;
+  --panel: rgba(255, 255, 255, 0.86);
+  --panel-strong: rgba(255, 255, 255, 0.96);
+  --text-main: #112217;
+  --text-soft: #4f735b;
+  --line: rgba(61, 153, 87, 0.16);
   --accent: #35c759;
-  --accent-soft: #8ff2aa;
+  --accent-soft: #1b7b37;
   position: relative;
   overflow: clip;
   min-height: 100vh;
   padding: clamp(1.25rem, 2vw, 2rem);
   background:
-    radial-gradient(circle at top left, rgba(53, 199, 89, 0.16), transparent 28%),
-    radial-gradient(circle at 88% 12%, rgba(90, 255, 145, 0.12), transparent 20%),
-    linear-gradient(180deg, #030705 0%, var(--page-bg) 48%, #020402 100%);
+    radial-gradient(circle at top left, rgba(53, 199, 89, 0.14), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(129, 233, 155, 0.18), transparent 20%),
+    linear-gradient(180deg, #ffffff 0%, var(--page-bg) 48%, #e4f5e8 100%);
   color: var(--text-main);
 }
 
@@ -43,7 +43,7 @@
   right: -6rem;
   width: 17rem;
   height: 17rem;
-  background: rgba(143, 242, 170, 0.12);
+  background: rgba(143, 242, 170, 0.18);
 }
 
 .about-hero,
@@ -113,7 +113,7 @@
   padding: 1.1rem 1rem;
   border: 1px solid var(--line);
   border-radius: 1.35rem;
-  background: rgba(10, 22, 14, 0.74);
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .credential-card span,
@@ -141,7 +141,7 @@
   align-self: end;
   border: 1px solid var(--line);
   border-radius: 2rem;
-  background: linear-gradient(180deg, rgba(9, 18, 12, 0.92) 0%, rgba(6, 13, 8, 0.98) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(244, 252, 246, 0.97) 100%);
   color: inherit;
   box-shadow: none;
 }
@@ -169,7 +169,7 @@
   border: 1px solid var(--line);
   border-radius: 2rem;
   background: var(--panel);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 15px 35px rgba(55, 111, 72, 0.1);
 }
 
 .panel-heading {
@@ -195,7 +195,7 @@
   padding: 1.2rem;
   border: 1px solid var(--line);
   border-radius: 1.4rem;
-  background: rgba(9, 19, 12, 0.82);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .principle-card h3,
@@ -212,7 +212,7 @@
 
 :host ::ng-deep .strength-list .p-tag {
   background: rgba(53, 199, 89, 0.16);
-  color: #a8ffbe;
+  color: #1b7b37;
   border: 1px solid rgba(53, 199, 89, 0.3);
 }
 
@@ -243,7 +243,7 @@
   padding: 1.2rem 1.25rem;
   border: 1px solid var(--line);
   border-radius: 1.4rem;
-  background: rgba(9, 19, 12, 0.82);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .career-dot {
