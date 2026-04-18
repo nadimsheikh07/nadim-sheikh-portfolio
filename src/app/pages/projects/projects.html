@@ -35,19 +35,21 @@
           <span>{{ project.company }}</span>
         </div>
         <h2>{{ project.title }}</h2>
-        <p>{{ project.summary }}</p>
+        <p>{{ project.description }}</p>
 
         <div class="outcome-list">
-          @for (item of project.outcomes; track item) {
-            <article class="outcome-item">
-              <span class="outcome-dot"></span>
-              <p>{{ item }}</p>
-            </article>
+          @if (project.outcomes) {
+            @for (item of project.outcomes; track item) {
+              <article class="outcome-item">
+                <span class="outcome-dot"></span>
+                <p>{{ item }}</p>
+              </article>
+            }
           }
         </div>
 
         <div class="tag-row">
-          @for (tech of project.stack; track tech) {
+          @for (tech of project.tech; track tech) {
             <p-tag [value]="tech" severity="success"></p-tag>
           }
         </div>

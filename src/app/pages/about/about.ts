@@ -5,7 +5,10 @@ import { ChipModule } from 'primeng/chip';
 import { DividerModule } from 'primeng/divider';
 import { TagModule } from 'primeng/tag';
 import { CAREER_STEPS } from '../../shared/data/career-steps';
+import { EDUCATION } from '../../shared/data/education';
+import { SKILLS } from '../../shared/data/skills';
 import { CareerStep } from '../../shared/models/career-step';
+import { Skill } from '../../shared/models/skill';
 
 interface Principle {
   title: string;
@@ -42,6 +45,8 @@ export class About {
     },
   ];
 
+  readonly skills: Skill[] = SKILLS;
+
   readonly strengths = [
     'Microservices and micro-frontend architecture',
     'REST APIs, test-driven development, and end-to-end testing',
@@ -57,4 +62,6 @@ export class About {
     { label: 'Backend depth', value: '7+ years with Laravel, Node.js, .NET' },
     { label: 'Education', value: 'MCA 2014, BCA 2011, JRNRV University Rajasthan' },
   ];
+
+  readonly education = EDUCATION;
 }

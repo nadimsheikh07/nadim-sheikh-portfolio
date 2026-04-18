@@ -68,6 +68,14 @@
 
       <p-divider></p-divider>
 
+      <div class="strength-list">
+        @for (skill of skills; track skill.name) {
+          <p-chip [label]="skill.name + ' • ' + skill.years"></p-chip>
+        }
+      </div>
+
+      <p-divider></p-divider>
+
       <div class="note-block">
         <p class="eyebrow">Focus Areas</p>
         <p>
@@ -95,6 +103,24 @@
             </div>
             <h3>{{ item.role }}</h3>
             <p>{{ item.summary }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="panel career-panel">
+    <div class="panel-heading">
+      <p class="eyebrow">Education</p>
+      <h2>Academic foundations that supported the engineering journey.</h2>
+    </div>
+
+    <div class="career-list">
+      @for (item of education; track item) {
+        <article class="career-item">
+          <span class="career-dot"></span>
+          <div>
+            <p>{{ item }}</p>
           </div>
         </article>
       }

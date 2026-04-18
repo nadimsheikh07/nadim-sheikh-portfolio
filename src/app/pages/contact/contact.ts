@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { ChipModule } from 'primeng/chip';
+import { PROFILE_LINKS } from '../../shared/data/profile-links';
+import { ProfileLink } from '../../shared/models/profile-link';
 
 interface ContactMethod {
   label: string;
@@ -18,6 +20,8 @@ interface ContactMethod {
   styleUrl: './contact.css',
 })
 export class Contact {
+  readonly profileLinks: ProfileLink[] = PROFILE_LINKS;
+
   readonly contactMethods: ContactMethod[] = [
     {
       label: 'Email',
@@ -30,18 +34,6 @@ export class Contact {
       value: '(+91) 7737033665',
       href: 'tel:+917739033665',
       icon: 'pi pi-phone',
-    },
-    {
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/nadimsheikh07',
-      href: 'https://www.linkedin.com/in/nadimsheikh07/',
-      icon: 'pi pi-linkedin',
-    },
-    {
-      label: 'GitHub',
-      value: 'github.com/nadimsheikh07',
-      href: 'https://github.com/nadimsheikh07',
-      icon: 'pi pi-github',
     },
   ];
 

@@ -52,6 +52,17 @@
         <a [href]="item.href" target="_blank" rel="noreferrer">Open</a>
       </article>
     }
+
+    @for (item of profileLinks; track item.label) {
+      <article class="contact-card">
+        <div class="contact-topline">
+          <i [class]="item.icon"></i>
+          <span>{{ item.label }}</span>
+        </div>
+        <p>{{ item.url }}</p>
+        <a [href]="item.url" target="_blank" rel="noreferrer">Open</a>
+      </article>
+    }
   </section>
 
   <section class="note-panel">
