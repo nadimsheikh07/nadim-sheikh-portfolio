@@ -10,9 +10,9 @@
   border: 0;
   border-bottom: 1px solid var(--app-line);
   border-radius: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(18px);
-  box-shadow: 0 10px 25px rgba(55, 111, 72, 0.08);
+  box-shadow: 0 10px 28px rgba(25, 91, 59, 0.08);
 }
 
 :host ::ng-deep .site-menubar .p-menubar-start,
@@ -91,7 +91,7 @@
   padding: 0.55rem 0.8rem;
   border: 1px solid var(--app-line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.84);
+  background: rgba(247, 252, 248, 0.96);
   color: var(--app-text-main);
   font-size: 0.84rem;
   font-weight: 600;
