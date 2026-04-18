@@ -1,0 +1,299 @@
+:host {
+  display: block;
+}
+
+.about-shell {
+  --page-bg: #061009;
+  --panel: rgba(10, 22, 14, 0.8);
+  --panel-strong: rgba(11, 28, 17, 0.95);
+  --text-main: #f3fff5;
+  --text-soft: #a3c7ad;
+  --line: rgba(82, 183, 110, 0.18);
+  --accent: #35c759;
+  --accent-soft: #8ff2aa;
+  position: relative;
+  overflow: clip;
+  min-height: 100vh;
+  padding: clamp(1.25rem, 2vw, 2rem);
+  background:
+    radial-gradient(circle at top left, rgba(53, 199, 89, 0.16), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(90, 255, 145, 0.12), transparent 20%),
+    linear-gradient(180deg, #030705 0%, var(--page-bg) 48%, #020402 100%);
+  color: var(--text-main);
+}
+
+.ambient {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(14px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.ambient-left {
+  top: 10rem;
+  left: -5rem;
+  width: 15rem;
+  height: 15rem;
+  background: rgba(53, 199, 89, 0.14);
+}
+
+.ambient-right {
+  top: 22rem;
+  right: -6rem;
+  width: 17rem;
+  height: 17rem;
+  background: rgba(143, 242, 170, 0.12);
+}
+
+.about-hero,
+.content-grid,
+.panel {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.8fr);
+  gap: 1.5rem;
+  max-width: 1180px;
+  margin: 0 auto 1.5rem;
+  padding: clamp(2rem, 4vw, 4rem) 0 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.9rem;
+  color: var(--accent-soft);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1,
+.panel-heading h2,
+.principle-card h3,
+.career-item h3 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.hero-copy h1 {
+  max-width: 12ch;
+  font-size: clamp(2.9rem, 6vw, 5.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.lead {
+  max-width: 44rem;
+  margin: 1.5rem 0 0;
+  color: var(--text-soft);
+  font-size: clamp(1rem, 1.55vw, 1.14rem);
+  line-height: 1.8;
+}
+
+.credential-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.credential-card,
+.panel,
+:host ::ng-deep .bio-card.p-card,
+.principle-card,
+.career-item {
+  backdrop-filter: blur(18px);
+}
+
+.credential-card {
+  padding: 1.1rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.35rem;
+  background: rgba(10, 22, 14, 0.74);
+}
+
+.credential-card span,
+.card-label,
+.career-meta {
+  display: inline-block;
+  color: var(--accent-soft);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.credential-card p,
+.principle-card p,
+.note-block p,
+.career-item p,
+:host ::ng-deep .bio-card .p-card-content p {
+  margin: 0.45rem 0 0;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+:host ::ng-deep .bio-card.p-card {
+  align-self: end;
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  background: linear-gradient(180deg, rgba(9, 18, 12, 0.92) 0%, rgba(6, 13, 8, 0.98) 100%);
+  color: inherit;
+  box-shadow: none;
+}
+
+:host ::ng-deep .bio-card .p-card-body {
+  padding: 1.5rem;
+}
+
+:host ::ng-deep .bio-card .p-card-content {
+  padding: 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1180px;
+  margin: 0 auto 1.5rem;
+}
+
+.panel {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 2vw, 1.7rem);
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  background: var(--panel);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+}
+
+.panel-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.25rem;
+}
+
+.panel-heading h2 {
+  max-width: 13ch;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.principles {
+  display: grid;
+  gap: 1rem;
+}
+
+.principle-card {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: rgba(9, 19, 12, 0.82);
+}
+
+.principle-card h3,
+.career-item h3 {
+  font-size: 1.45rem;
+  line-height: 1.05;
+}
+
+.strength-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+:host ::ng-deep .strength-list .p-tag {
+  background: rgba(53, 199, 89, 0.16);
+  color: #a8ffbe;
+  border: 1px solid rgba(53, 199, 89, 0.3);
+}
+
+:host ::ng-deep .p-divider.p-divider-horizontal::before {
+  border-top-color: var(--line);
+}
+
+.note-block {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.career-panel {
+  max-width: 1180px;
+  margin-bottom: 2rem;
+}
+
+.career-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.career-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: rgba(9, 19, 12, 0.82);
+}
+
+.career-dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.35rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
+  box-shadow: 0 0 0 0.35rem rgba(53, 199, 89, 0.12);
+}
+
+.career-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .about-hero,
+  .content-grid,
+  .credential-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1,
+  .panel-heading h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-shell {
+    padding: 1rem;
+  }
+
+  .about-hero {
+    padding-top: 1.25rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.5rem, 14vw, 4rem);
+  }
+
+  .career-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .panel,
+  :host ::ng-deep .bio-card.p-card {
+    border-radius: 1.4rem;
+  }
+}

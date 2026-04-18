@@ -1,1 +1,103 @@
-<p>about works!</p>
+<section class="about-shell">
+  <div class="ambient ambient-left"></div>
+  <div class="ambient ambient-right"></div>
+
+  <section class="about-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">About Nadim</p>
+      <h1>Full-stack engineer with a long record of shipping web platforms that have to work in the real world.</h1>
+      <p class="lead">
+        My background spans frontend systems, backend architecture, databases, cloud delivery, and technical
+        leadership. I enjoy building products where clean user experience and strong engineering discipline have
+        to meet in the same place.
+      </p>
+
+      <div class="credential-grid">
+        @for (item of credentials; track item.label) {
+          <article class="credential-card">
+            <span>{{ item.label }}</span>
+            <p>{{ item.value }}</p>
+          </article>
+        }
+      </div>
+    </div>
+
+    <p-card styleClass="bio-card">
+      <p class="card-label">Professional Summary</p>
+      <p>
+        I work comfortably across Angular, React, Laravel, Node.js, Python, Go, and ASP.NET, and I enjoy
+        collaborating with designers, project managers, frontend developers, and database administrators to
+        deliver systems that are stable, scalable, and maintainable.
+      </p>
+      <p>
+        Over the years, I have contributed to e-commerce platforms, healthcare systems, inventory tools,
+        tournament management products, WordPress sites, and enterprise dashboards, always with an eye on
+        performance, testing, and clarity.
+      </p>
+    </p-card>
+  </section>
+
+  <section class="content-grid">
+    <section class="panel">
+      <div class="panel-heading">
+        <p class="eyebrow">How I Work</p>
+        <h2>Engineering habits that stay useful long after launch.</h2>
+      </div>
+
+      <div class="principles">
+        @for (principle of principles; track principle.title) {
+          <article class="principle-card">
+            <h3>{{ principle.title }}</h3>
+            <p>{{ principle.description }}</p>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <p class="eyebrow">Core Strengths</p>
+        <h2>Technology areas that show up repeatedly in my projects.</h2>
+      </div>
+
+      <div class="strength-list">
+        @for (item of strengths; track item) {
+          <p-tag [value]="item" severity="success"></p-tag>
+        }
+      </div>
+
+      <p-divider></p-divider>
+
+      <div class="note-block">
+        <p class="eyebrow">Focus Areas</p>
+        <p>
+          I am especially strong in products that need modular architecture, solid backend services, responsive
+          frontend delivery, and a practical testing approach with unit, integration, and E2E coverage.
+        </p>
+      </div>
+    </section>
+  </section>
+
+  <section class="panel career-panel">
+    <div class="panel-heading">
+      <p class="eyebrow">Career Journey</p>
+      <h2>From implementation-heavy delivery to technical leadership across multiple product domains.</h2>
+    </div>
+
+    <div class="career-list">
+      @for (item of career; track item.period + item.company) {
+        <article class="career-item">
+          <span class="career-dot"></span>
+          <div>
+            <div class="career-meta">
+              <span>{{ item.period }}</span>
+              <span>{{ item.company }}</span>
+            </div>
+            <h3>{{ item.role }}</h3>
+            <p>{{ item.summary }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</section>
