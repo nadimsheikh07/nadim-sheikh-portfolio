@@ -6,17 +6,12 @@ import { CardModule } from 'primeng/card';
 import { ChipModule } from 'primeng/chip';
 import { DividerModule } from 'primeng/divider';
 import { TagModule } from 'primeng/tag';
+import { CAREER_STEPS } from '../../shared/data/career-steps';
+import { CareerStep } from '../../shared/models/career-step';
 
 interface Skill {
   name: string;
   years: string;
-}
-
-interface Experience {
-  role: string;
-  date: string;
-  company: string;
-  description: string;
 }
 
 interface Project {
@@ -73,36 +68,7 @@ export class Home {
     { name: 'Go, Gin, C, C++, and C#', years: '2+ years' },
   ];
 
-  readonly experience: Experience[] = [
-    {
-      role: 'Full Stack Engineer',
-      date: 'Jan 2026 - Present',
-      company: 'PincodeKart',
-      description:
-        'Building large-scale e-commerce products with microservices, micro-frontends, real-time integrations, and concurrency-ready architecture.',
-    },
-    {
-      role: 'Full Stack Engineer and Technical Lead',
-      date: 'Aug 2024 - Dec 2025',
-      company: 'CIGI Technologies Pvt Ltd',
-      description:
-        'Led delivery across ATP Forms, ATP RuleBook App, Lea Medicare, and PowerFlex with React, Next.js, Node.js, Laravel, Django, and resilient service patterns.',
-    },
-    {
-      role: 'Full Stack Engineer',
-      date: 'Jan 2024 - Jul 2024',
-      company: 'Sedar Global',
-      description:
-        'Delivered e-commerce solutions from scratch and maintained production systems with strong code quality standards.',
-    },
-    {
-      role: 'Full Stack Engineer and Technical Lead',
-      date: 'Feb 2021 - Mar 2023',
-      company: 'Code Town Technologies',
-      description:
-        'Shipped products like Asset Track For Cloud, Doctors Plaza, Mulberri, and SonoLab using Laravel, Next.js, React, and Material UI.',
-    },
-  ];
+  readonly career: CareerStep[] = CAREER_STEPS;
 
   readonly projects: Project[] = [
     {

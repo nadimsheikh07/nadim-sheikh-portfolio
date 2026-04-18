@@ -4,17 +4,12 @@ import { CardModule } from 'primeng/card';
 import { ChipModule } from 'primeng/chip';
 import { DividerModule } from 'primeng/divider';
 import { TagModule } from 'primeng/tag';
+import { CAREER_STEPS } from '../../shared/data/career-steps';
+import { CareerStep } from '../../shared/models/career-step';
 
 interface Principle {
   title: string;
   description: string;
-}
-
-interface CareerStep {
-  period: string;
-  company: string;
-  role: string;
-  summary: string;
 }
 
 interface Credential {
@@ -54,36 +49,7 @@ export class About {
     'MySQL, MongoDB, MSSQL, PostgreSQL, Redis, Kafka, and BullMQ',
   ];
 
-  readonly career: CareerStep[] = [
-    {
-      period: '2026 - Present',
-      company: 'PincodeKart',
-      role: 'Full Stack Engineer',
-      summary:
-        'Focused on scalable e-commerce systems, real-time integrations, microservices, and micro-frontends built for high concurrency.',
-    },
-    {
-      period: '2024 - 2025',
-      company: 'CIGI Technologies Pvt Ltd',
-      role: 'Full Stack Engineer and Technical Lead',
-      summary:
-        'Led delivery across ATP Forms, Lea Medicare, PowerFlex, and RuleBook products using React, Next.js, Node.js, Laravel, and Django.',
-    },
-    {
-      period: '2021 - 2024',
-      company: 'Code Town Technologies, Sedar Global',
-      role: 'Full Stack Engineer and Technical Lead',
-      summary:
-        'Delivered client platforms across healthcare, insurance, asset tracking, and commerce with strong code quality and frontend execution.',
-    },
-    {
-      period: '2015 - 2021',
-      company: 'Pegasus, MuskOwl, GKMIT, Intelloger',
-      role: 'Full Stack Engineer',
-      summary:
-        'Built OpenCart stores, GPS tracking systems, WordPress sites, React applications, and backend services across multiple stacks.',
-    },
-  ];
+  readonly career: CareerStep[] = CAREER_STEPS;
 
   readonly credentials: Credential[] = [
     { label: 'Experience', value: '11+ years in software engineering' },
