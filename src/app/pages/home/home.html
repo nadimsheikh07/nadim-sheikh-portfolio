@@ -1,1 +1,125 @@
-<p>home works!</p>
+<section class="home-shell">
+  <div class="background-orb orb-left"></div>
+  <div class="background-orb orb-right"></div>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Angular Engineer • Frontend Systems • Product Thinking</p>
+      <h1>Designing interfaces that feel sharp, fast, and deeply usable.</h1>
+      <p class="hero-text">
+        I build modern Angular experiences with a product mindset, pairing clean engineering with visual clarity so teams can ship work that feels premium from the first interaction.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/projects" class="action action-primary">Explore Projects</a>
+        <a routerLink="/contact" class="action action-secondary">Start a Conversation</a>
+      </div>
+
+      <div class="stats-grid">
+        @for (stat of stats; track stat.label) {
+          <article class="stat-card">
+            <span class="stat-value">{{ stat.value }}</span>
+            <p>{{ stat.label }}</p>
+          </article>
+        }
+      </div>
+    </div>
+
+    <aside class="hero-panel">
+      <div class="panel-glow"></div>
+      <div class="hero-badge">
+        <span>Currently shaping</span>
+        <strong>Scalable Angular products with polished UX systems</strong>
+      </div>
+
+      <div class="signal-card">
+        <p class="signal-title">Build philosophy</p>
+        <ul>
+          <li>Clarity before complexity</li>
+          <li>Motion with purpose, never noise</li>
+          <li>Interfaces that help people decide faster</li>
+        </ul>
+      </div>
+
+      <div class="mini-showcase">
+        <div>
+          <span class="mini-label">Focus</span>
+          <p>Angular architecture, component systems, and frontend performance.</p>
+        </div>
+        <div>
+          <span class="mini-label">Approach</span>
+          <p>Pair design instincts with engineering discipline so product quality compounds over time.</p>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section-block">
+    <div class="section-heading">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Projects shaped around momentum, readability, and trust.</h2>
+    </div>
+
+    <div class="project-grid">
+      @for (project of projects; track project.title) {
+        <article class="project-card">
+          <div class="project-topline">
+            <span>{{ project.accent }}</span>
+            <a [routerLink]="project.link">View details</a>
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="tag-row">
+            @for (tech of project.tech; track tech) {
+              <span>{{ tech }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="story-grid">
+    <div class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Frontend growth built in real shipping environments.</h2>
+      </div>
+
+      <div class="timeline">
+        @for (item of experience; track item.role) {
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div>
+              <div class="timeline-meta">
+                <span>{{ item.date }}</span>
+                <span>{{ item.company }}</span>
+              </div>
+              <h3>{{ item.role }}</h3>
+              <p>{{ item.description }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Capabilities</p>
+        <h2>The stack is broad, but the standard stays high.</h2>
+      </div>
+
+      <div class="skill-grid">
+        @for (skill of skills; track skill.name) {
+          <article class="skill-card">
+            <i [class]="skill.icon"></i>
+            <div>
+              <h3>{{ skill.name }}</h3>
+              <p>{{ skill.note }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+</section>
