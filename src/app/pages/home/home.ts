@@ -1,11 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { ChipModule } from 'primeng/chip';
+import { DividerModule } from 'primeng/divider';
+import { TagModule } from 'primeng/tag';
 
 interface Skill {
   name: string;
-  icon: string;
-  note: string;
+  years: string;
 }
 
 interface Experience {
@@ -17,10 +21,9 @@ interface Experience {
 
 interface Project {
   title: string;
+  period: string;
   description: string;
   tech: string[];
-  link: string;
-  accent: string;
 }
 
 interface Stat {
@@ -28,72 +31,105 @@ interface Stat {
   label: string;
 }
 
+interface ProfileLink {
+  label: string;
+  url: string;
+  icon: string;
+}
+
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, ButtonModule, CardModule, ChipModule, DividerModule, TagModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
   readonly stats: Stat[] = [
-    { value: '5+', label: 'Years shaping production-grade interfaces' },
-    { value: '30%', label: 'Average performance lift on key journeys' },
-    { value: '12', label: 'Design systems and apps delivered end-to-end' },
+    { value: '11+', label: 'Years in software engineering' },
+    { value: '7+', label: 'Years across Angular, React, Laravel, Node, and .NET' },
+    { value: '4+', label: 'Years on Django, cloud delivery, and WordPress systems' },
   ];
 
-  skills: Skill[] = [
-    { name: 'Angular', icon: 'pi pi-objects-column', note: 'Large-scale app architecture and standalone components' },
-    { name: 'TypeScript', icon: 'pi pi-code', note: 'Typed UI systems with maintainable domain modeling' },
-    { name: 'JavaScript', icon: 'pi pi-bolt', note: 'Fast product iteration with clean interaction logic' },
-    { name: 'HTML & CSS', icon: 'pi pi-palette', note: 'Responsive layouts with sharp visual hierarchy' },
-    { name: 'Tailwind CSS', icon: 'pi pi-sparkles', note: 'Utility-first styling with a custom design voice' },
-    { name: 'PrimeNG', icon: 'pi pi-box', note: 'Accessible enterprise UI foundations and theming' },
-    { name: 'Node.js', icon: 'pi pi-server', note: 'Backend glue for APIs, tooling, and automation' },
-    { name: 'Git & GitHub', icon: 'pi pi-github', note: 'Team workflows, reviews, and steady shipping' },
+  readonly profileLinks: ProfileLink[] = [
+    { label: 'GitHub', url: 'https://github.com/nadimsheikh07', icon: 'pi pi-github' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/nadimsheikh07/', icon: 'pi pi-linkedin' },
+    { label: 'NPM', url: 'https://www.npmjs.com/~nadimsheikh07', icon: 'pi pi-box' },
   ];
 
-  experience: Experience[] = [
+  readonly highlights: string[] = [
+    'Senior software engineer working across PHP, Python, MERN, MEAN, Go, and ASP.NET.',
+    'Experienced with microservices, micro-frontends, REST APIs, TDD, and end-to-end testing.',
+    'Comfortable collaborating with frontend teams, project managers, designers, and DB administrators.',
+  ];
+
+  readonly skills: Skill[] = [
+    { name: 'Angular and Ionic', years: '7+ years' },
+    { name: 'React, Next.js, and React Native', years: '7+ years' },
+    { name: 'Node.js, Express, and NestJS', years: '7+ years' },
+    { name: 'Laravel and PHP MVC', years: '7+ years' },
+    { name: '.NET and ASP.NET', years: '7+ years' },
+    { name: 'Python and Django', years: '4+ years' },
+    { name: 'MySQL, MongoDB, MSSQL, PostgreSQL', years: '11+ years' },
+    { name: 'Go, Gin, C, C++, and C#', years: '2+ years' },
+  ];
+
+  readonly experience: Experience[] = [
     {
-      role: 'Senior Software Engineer',
-      date: '2023 - Present',
-      company: 'Tech Innovators',
-      description: 'Leading Angular delivery for enterprise-facing products, turning dense workflows into clear interfaces and mentoring a frontend team across releases.',
+      role: 'Full Stack Engineer',
+      date: 'Jan 2026 - Present',
+      company: 'PincodeKart',
+      description:
+        'Building large-scale e-commerce products with microservices, micro-frontends, real-time integrations, and concurrency-ready architecture.',
     },
     {
-      role: 'Software Engineer',
-      date: '2020 - 2023',
-      company: 'Creative Digital',
-      description: 'Built responsive client applications, integrated API-heavy experiences, and improved performance across high-traffic product surfaces.',
+      role: 'Full Stack Engineer and Technical Lead',
+      date: 'Aug 2024 - Dec 2025',
+      company: 'CIGI Technologies Pvt Ltd',
+      description:
+        'Led delivery across ATP Forms, ATP RuleBook App, Lea Medicare, and PowerFlex with React, Next.js, Node.js, Laravel, Django, and resilient service patterns.',
     },
     {
-      role: 'Frontend Intern',
-      date: '2019 - 2020',
-      company: 'Web Solutions',
-      description: 'Learned the craft in production by shipping UI components, fixing usability issues, and collaborating closely with designers and QA.',
+      role: 'Full Stack Engineer',
+      date: 'Jan 2024 - Jul 2024',
+      company: 'Sedar Global',
+      description:
+        'Delivered e-commerce solutions from scratch and maintained production systems with strong code quality standards.',
+    },
+    {
+      role: 'Full Stack Engineer and Technical Lead',
+      date: 'Feb 2021 - Mar 2023',
+      company: 'Code Town Technologies',
+      description:
+        'Shipped products like Asset Track For Cloud, Doctors Plaza, Mulberri, and SonoLab using Laravel, Next.js, React, and Material UI.',
     },
   ];
 
-  projects: Project[] = [
+  readonly projects: Project[] = [
     {
-      title: 'Command Center UI',
-      description: 'A high-density operations dashboard for teams that need fast scanning, live status updates, and confident decision-making.',
-      tech: ['Angular', 'PrimeNG', 'RxJS'],
-      link: '/projects',
-      accent: 'Sunrise Grid',
+      title: 'PincodeKart and PincodeDak',
+      period: '2026 - Current',
+      description:
+        'Scalable e-commerce platform work focused on modular services, micro-frontends, real-time data integration, and high-concurrency systems.',
+      tech: ['Microservices', 'Micro-frontends', 'Node.js', 'MongoDB', 'PostgreSQL'],
     },
     {
-      title: 'Commerce Experience',
-      description: 'A conversion-focused storefront with richer product storytelling, cleaner checkout flows, and real-time inventory awareness.',
-      tech: ['Angular', 'Tailwind', 'Node.js'],
-      link: '/projects',
-      accent: 'Signal Orange',
+      title: 'ATP Forms',
+      period: '2024 - 2025',
+      description:
+        'Tournament management platform with real-time updates, high-availability architecture, and sub-second data handling during peak traffic.',
+      tech: ['Next.js', 'React', 'Node.js', 'Laravel', 'Redis'],
     },
     {
-      title: 'Portfolio System',
-      description: 'A personal brand site that treats engineering credibility like a product, with strong visuals, clear narrative, and responsive polish.',
-      tech: ['Angular', 'CSS', 'PrimeIcons'],
-      link: '/projects',
-      accent: 'Editorial Motion',
+      title: 'Lea Medicare',
+      period: '2025',
+      description:
+        'Smart EMR platform for Africa supporting appointments, consultations, medical records, and performance-focused backend services.',
+      tech: ['Next.js', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis'],
     },
+  ];
+
+  readonly education = [
+    'MCA, JRNRV University Rajasthan, 2014',
+    'BCA, JRNRV University Rajasthan, 2011',
   ];
 }
